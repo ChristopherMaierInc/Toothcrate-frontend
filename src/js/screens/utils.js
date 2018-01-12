@@ -1,6 +1,6 @@
 import { announcePageLoaded } from 'grommet/utils/Announcer';
 
-const DEFAULT_TITLE = 'Toothcrate Frontend';
+const DEFAULT_TITLE = 'Toothcrate';
 
 export function pageLoaded(title) {
   if (document) {
