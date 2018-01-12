@@ -52,7 +52,7 @@ class Login extends Component {
             justify='center'
             align='center'
           >
-            <Heading tag='h1' strong={true}>Welcome to ToothCrate</Heading>
+            <Heading align='center' tag='h1' strong={true}>Welcome to ToothCrate</Heading>
             <Paragraph align='center' size='large'>
               Inventory Management, Made Easy!
             </Paragraph>
