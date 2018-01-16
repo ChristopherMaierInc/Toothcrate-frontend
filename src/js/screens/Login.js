@@ -52,9 +52,9 @@ class Login extends Component {
             justify='center'
             align='center'
           >
-            <Heading tag='h1' strong={true}>Welcome to ToothCrate</Heading>
+            <Heading align='center' tag='h1' strong={true}>ToothCrate</Heading>
             <Paragraph align='center' size='large'>
-              Inventory Management, Made Easy!
+              Inventory management made easy
             </Paragraph>
           </Section>
         </Article>
@@ -63,7 +63,7 @@ class Login extends Component {
           <span />
           <LoginForm
             align='start'
-            title='Toothcrate'
+            title='Login'
             onSubmit={this._onSubmit}
             errors={[error]}
             usernameType='text'

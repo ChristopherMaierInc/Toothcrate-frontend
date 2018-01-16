@@ -32,11 +32,11 @@ class NavSidebar extends Component {
     ));
 
     return (
-      <Sidebar colorIndex='neutral-3' fixed={true}>
+      <Sidebar colorIndex='grey-4-a' fixed={true}>
         <Header size='large' justify='between' pad={{ horizontal: 'medium' }}>
           <Title onClick={this._onClose} a11yTitle='Close Menu'>
             <Logo />
-            <span>Toothcrate Frontend</span>
+            <span>Menu</span>
           </Title>
           <Button
             icon={<CloseIcon />}
