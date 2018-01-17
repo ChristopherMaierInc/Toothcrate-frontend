@@ -19,9 +19,12 @@ import Menu from 'grommet/components/Menu';
 import Headline from 'grommet/components/Headline';
 import Spinning from 'grommet/components/icons/Spinning';
 import AddIcon from 'grommet/components/icons/base/Add';
+
 import { getMessage } from 'grommet/utils/Intl';
 
 import NavControl from '../components/NavControl';
+import ToothFooter from '../components/ToothFooter';
+
 import {
   loadDashboard, unloadDashboard
 } from '../actions/dashboard';
@@ -94,41 +97,34 @@ class Dashboard extends Component {
     }
 
     return (
-      <Article primary={true}>
-        {/* <Header
-          direction='row'
-          justify='between'
-          size='large'
-          pad={{ horizontal: 'medium', between: 'small' }}
-        > */}
+      <Article className="dashboard" primary={true}>
+        <Header size='large'>
           <NavControl />
-        {/* </Header> */}
+          <Title>
+            <a href="/">
+              {/* <Image src={logo} size='thumb'/> */}Home
+            </a>
+          </Title>
+          <Box flex={true} justify='end' direction='row' responsive={false}>
+
+            <Menu icon={<AddIcon />} dropAlign={{
+                "right" : "right"
+              }}>
+              <Anchor href='#' className='active'>
+                + New Procedure
+              </Anchor>
+            </Menu>
+          </Box>
+        </Header>
+
         {errorNode}
         <Box pad='medium'>
-
-          <Header size='large'>
-            <Title>
-              <a href="/">
-                {/* <Image src={logo} size='thumb'/> */}Home
-              </a>
-            </Title>
-            <Box flex={true} justify='end' direction='row' responsive={false}>
-
-              <Menu icon={<AddIcon />} dropAlign={{
-                  "right" : "right"
-                }}>
-                <Anchor href='#' className='active'>
-                  + New Procedure
-                </Anchor>
-              </Menu>
-            </Box>
-          </Header>
 
           <Headline align="center" size="large">Procedures</Headline>
             <hr/>
           <Headline align="center" size="large">Inventory</Headline>
-          {/* <UserList />
-          <ToothFooter className="navFooter"/> */}
+            {/* <UserList /> */}
+          <ToothFooter className="navFooter"/>
 
         </Box>
       </Article>
